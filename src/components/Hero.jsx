@@ -15,9 +15,9 @@ function Hero() {
   
   // Stats shown in the hero section
   const stats = [
-    { number: '194', label: 'Completed Projects', icon: '🎯' },
-    { number: '98%', label: 'Client Rating', icon: '⭐' },
-    { number: '6', label: 'Years of Experience', icon: '⚡' },
+    { number: '3', label: 'Projects', icon: '🎯' },
+    { number: '2', label: 'Completed Project', icon: '⭐' },
+    { number: '1', label: 'Years of Experience', icon: '⚡' },
   ]
 
   // Handle mouse movement for background effect
@@ -63,11 +63,11 @@ function Hero() {
     >
       {/* Green gradient background that follows mouse */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#204E27]/30 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#204a4e]/30 to-transparent" />
         <motion.div
           className="absolute inset-0 opacity-20"
           style={{
-            backgroundImage: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(109, 190, 69, 0.3) 0%, transparent 60%)`,
+            backgroundImage: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(69, 166, 190, 0.3) 0%, transparent 60%)`,
             willChange: 'transform'
           }}
         />
@@ -78,7 +78,7 @@ function Hero() {
         {floatingElements.map(({ id, left, top, duration, delay }) => (
           <motion.div
             key={id}
-            className="absolute w-2 h-2 bg-[#6DBE45]/20 rounded-full"
+            className="absolute w-2 h-2 bg-[#45b0be]/20 rounded-full"
             style={{ left, top }}
             initial={{ scale: 1, opacity: 0.5 }}
             animate={{
@@ -123,7 +123,7 @@ function Hero() {
                   stiffness: 50
                 }}
               >
-                Ethan Carter
+                Afzal Khairahmansyach
               </motion.h1>
 
               {/* Typing animation for roles */}
@@ -133,16 +133,16 @@ function Hero() {
                     sequence={[
                       'Web Developer',
                       2000,
-                      'UI/UX Designer',
+                      'Back End Developer',
                       2000,
                       'Problem Solver',
                       2000,
-                      'Mobile App Developer',
+                      'Data Engineer',
                       2000,
                     ]}
                     wrapper="h2"
                     className="text-2xl sm:text-3xl lg:text-4xl font-semibold 
-                      bg-gradient-to-r from-[#6DBE45] to-[#6DBE45] bg-clip-text text-transparent
+                      bg-gradient-to-r from-[#45b0be] to-[#45b0be] bg-clip-text text-transparent
                       font-sans tracking-tight"
                     repeat={Infinity}
                     speed={50}
@@ -164,7 +164,7 @@ function Hero() {
                 <motion.div
                   key={label}
                   className="p-4 sm:p-6 bg-white/5 backdrop-blur-sm rounded-xl 
-                    hover:bg-white/10 border border-white/10 hover:border-[#6DBE45]/50
+                    hover:bg-white/10 border border-white/10 hover:border-[#45b0be]/50
                     transform-gpu"
                   initial={{ opacity: 0, y: 20 }}
                   animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -177,7 +177,7 @@ function Hero() {
                 >
                   <span className="block mb-3 text-2xl sm:text-3xl">{icon}</span>
                   <motion.div 
-                    className="text-2xl sm:text-3xl font-bold text-[#6DBE45] mb-1"
+                    className="text-2xl sm:text-3xl font-bold text-[#45b0be] mb-1"
                     initial={{ number: 0 }}
                     animate={inView ? { number: parseInt(number) } : { number: 0 }}
                     transition={{ duration: 1.5 }}
@@ -190,20 +190,24 @@ function Hero() {
             </div>
 
             {/* Contact button */}
+            <a
+            href='https://drive.google.com/file/d/1ejeLMr_KsRP4TiGBfGMzFUnVyF6zmvGw/view?usp=sharing'
+            >
             <motion.button
-              className="group relative bg-[#6DBE45] text-white font-bold py-3 sm:py-4 px-8 sm:px-10 
+              className="group relative bg-[#45b0be] text-white font-bold py-3 sm:py-4 px-8 sm:px-10 
                 rounded-full overflow-hidden w-full sm:w-auto"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <span className="relative z-10">Let&apos;s Connect</span>
+              <span className="relative z-10">See&apos;s My CV</span>
               <motion.div
-                className="absolute inset-0 bg-[#204E27]"
+                className="absolute inset-0 bg-[#204a4e]"
                 initial={{ x: '-100%' }}
                 whileHover={{ x: 0 }}
                 transition={{ duration: 0.3 }}
               />
             </motion.button>
+            </a>
           </motion.div>
 
           {/* Right side - Profile image */}
@@ -223,9 +227,9 @@ function Hero() {
                 className="relative w-48 h-48 mx-auto overflow-hidden rounded-full sm:w-64 sm:h-64 lg:w-96 lg:h-96"
                 animate={{
                   boxShadow: [
-                    '0 0 20px rgba(109, 190, 69, 0.3)',
-                    '0 0 60px rgba(109, 190, 69, 0.3)',
-                    '0 0 20px rgba(109, 190, 69, 0.3)',
+                    '0 0 20px rgba(69, 166, 190, 0.3)',
+                    '0 0 60px rgba(69, 166, 190, 0.3)',
+                    '0 0 20px rgba(69, 166, 190, 0.3)',
                   ],
                 }}
                 transition={{
@@ -234,8 +238,8 @@ function Hero() {
                 }}
               >
                 <img
-                  src="/Profile.jpeg"
-                  alt="Ethan Carter"
+                  src="/fto.JPG"
+                  alt="Afzal Khairahmansyach"
                   className="object-cover w-full h-full"
                   loading="lazy"
                 />

@@ -18,7 +18,7 @@ function Projects() {
   const [canScrollRight, setCanScrollRight] = useState(true)
 
   // Project category filters
-  const categories = ['all', 'web', 'mobile', 'design', 'blockchain']
+  const categories = ['all', 'Online Shop', 'Event', 'Tourist', 'Portfolio']
 
   // Animation settings for container elements
   const containerVariants = {
@@ -56,12 +56,12 @@ function Projects() {
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Platform",
-      category: "web",
-      description: "A full-stack e-commerce solution with real-time inventory management",
-      image: "1.jpeg",
+      title: "Website Shoessland",
+      category: "Online Shop",
+      description: "Online Hyper Shoe Store, With Payment Gateway and Subscription Box For Membership",
+      image: "s.png",
       video: "/project-demos/ecommerce-demo.mp4",
-      tags: ["React", "Node.js", "MongoDB", "Stripe"],
+      tags: ["HTMLS", "Tailwind", "Javascript", "Stripe"],
       testimonial: {
         text: "The e-commerce platform transformed our business. Sales increased by 200% in the first quarter!",
         author: "Sarah Johnson",
@@ -76,12 +76,12 @@ function Projects() {
     },
     {
       id: 2,
-      title: "Health & Fitness App",
-      category: "mobile",
-      description: "Cross-platform mobile app for workout tracking and meal planning",
-      image: "2.jpeg",
+      title: "Caturnawa",
+      category: "Event",
+      description: " Caturnawa website serves as a platform providing information about competitions, facilitating registrations and payments, managing competition assessments, and displaying leaderboards for each event.",
+      image: "e.png",
       video: "/project-demos/fitness-demo.mp4",
-      tags: ["React Native", "Firebase", "Redux", "GraphQL"],
+      tags: ["Laravel", "PostgresSQL", "Supabase", "Midtrans"],
       testimonial: {
         text: "User engagement increased dramatically. The app is intuitive and feature-rich.",
         author: "Mike Chen",
@@ -91,12 +91,12 @@ function Projects() {
     },
     {
       id: 3,
-      title: "Real Estate Platform",
-      category: "web",
-      description: "Property listing and management system with virtual tours",
-      image: "3.jpeg",
+      title: "Anambas Tourism Website RESTful APIs",
+      category: "Tourist",
+      description: "Designed and implemented RESTful APIs using Laravel and MySQL for seamless data management and integration,Documentation With Swagger UI",
+      image: "a.png",
       video: "/project-demos/realestate-demo.mp4",
-      tags: ["Next.js", "Prisma", "PostgreSQL", "ThreeJS"],
+      tags: ["Laravel", "Mysql"],
       testimonial: {
         text: "The virtual tour feature revolutionized how we showcase properties.",
         author: "Lisa Park",
@@ -106,12 +106,12 @@ function Projects() {
     },
     {
       id: 4,
-      title: "Blockchain Marketplace",
-      category: "blockchain",
-      description: "Decentralized marketplace for digital assets and NFTs",
-      image: "4.jpeg",
+      title: "My Portfolio Website",
+      category: "Portfolio",
+      description: "My First Project Using React build This Portfolio Website",
+      image: "por.png",
       video: "/project-demos/blockchain-demo.mp4",
-      tags: ["Solidity", "Web3.js", "React", "IPFS"],
+      tags: ["React", "Tailwind"],
       testimonial: {
         text: "A game-changing platform for digital artists and collectors alike.",
         author: "David Kim",
@@ -191,7 +191,7 @@ function Projects() {
         <motion.div 
           className="absolute inset-0"
           style={{
-            backgroundImage: `radial-gradient(circle at center, #6DBE45 1px, transparent 1px)`,
+            backgroundImage: `radial-gradient(circle at center, #45b0be 1px, transparent 1px)`,
             backgroundSize: '50px 50px',
             willChange: 'transform'
           }}
@@ -218,7 +218,7 @@ function Projects() {
             className="text-5xl lg:text-6xl font-bold text-white mb-6"
             variants={itemVariants}
           >
-            Our <span className="text-[#6DBE45]">Projects</span>
+            My <span className="text-[#45b0be]">Projects</span>
           </motion.h2>
 
           {/* Filter Buttons */}
@@ -235,8 +235,8 @@ function Projects() {
                   backdrop-blur-sm border transform-gpu
                   transition-all duration-300
                   ${activeFilter === category
-                    ? 'bg-[#6DBE45] text-white border-[#6DBE45] shadow-lg shadow-[#6DBE45]/20'
-                    : 'bg-white/5 text-white/80 border-white/10 hover:border-[#6DBE45]/50'
+                    ? 'bg-[#45b0be] text-white border-[#45b0be] shadow-lg shadow-[#45b0be]/20'
+                    : 'bg-white/5 text-white/80 border-white/10 hover:border-[#45b0be]/50'
                   }
                 `}
                 variants={itemVariants}
@@ -285,7 +285,7 @@ function Projects() {
                   className="flex-none w-[300px] sm:w-[350px] snap-center group relative rounded-xl 
                     border border-white/10 bg-white/5 backdrop-blur-sm
                     transform-gpu transition-all duration-300
-                    hover:border-[#6DBE45]/50 hover:shadow-lg hover:shadow-[#6DBE45]/5"
+                    hover:border-[#45b0be]/50 hover:shadow-lg hover:shadow-[#45b0be]/5"
                   variants={itemVariants}
                   custom={index}
                   whileHover={{ 
@@ -323,7 +323,7 @@ function Projects() {
                     transition={{ duration: 0.2 }}
                   >
                     {/* Category Tag */}
-                    <div className="text-xs sm:text-sm font-medium text-[#6DBE45]">
+                    <div className="text-xs sm:text-sm font-medium text-[#45b0be]">
                       {project.category.charAt(0).toUpperCase() + project.category.slice(1)}
                     </div>
 
@@ -353,8 +353,8 @@ function Projects() {
                     {/* View Project Button */}
                     <button
                       className="w-full mt-4 py-2.5 sm:py-3 px-4 sm:px-6 rounded-full 
-                        bg-[#6DBE45]/20 text-[#6DBE45] text-sm sm:text-base
-                        border border-[#6DBE45]/30 hover:bg-[#6DBE45]/30 
+                        bg-[#45b0be]/20 text-[#45b0be] text-sm sm:text-base
+                        border border-[#45b0be]/30 hover:bg-[#45b0be]/30 
                         transition-colors backdrop-blur-sm"
                       onClick={() => setSelectedProject(project)}
                     >
@@ -371,9 +371,9 @@ function Projects() {
             <motion.button
               className="absolute left-0 top-1/2 -translate-y-1/2
                 bg-white/10 backdrop-blur-sm p-4 rounded-full
-                hover:bg-[#6DBE45]/20 transition-all duration-300
+                hover:bg-[#45b0be]/20 transition-all duration-300
                 border border-white/20 transform-gpu
-                hover:shadow-lg hover:shadow-[#6DBE45]/20
+                hover:shadow-lg hover:shadow-[#45b0be]/20
                 disabled:opacity-50 disabled:cursor-not-allowed"
               variants={itemVariants}
               whileHover={{ scale: 1.1 }}
@@ -391,9 +391,9 @@ function Projects() {
             <motion.button
               className="absolute right-0 top-1/2 -translate-y-1/2
                 bg-white/10 backdrop-blur-sm p-4 rounded-full
-                hover:bg-[#6DBE45]/20 transition-all duration-300
+                hover:bg-[#45b0be]/20 transition-all duration-300
                 border border-white/20 transform-gpu
-                hover:shadow-lg hover:shadow-[#6DBE45]/20
+                hover:shadow-lg hover:shadow-[#45b0be]/20
                 disabled:opacity-50 disabled:cursor-not-allowed"
               variants={itemVariants}
               whileHover={{ scale: 1.1 }}

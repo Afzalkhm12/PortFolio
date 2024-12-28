@@ -2,7 +2,7 @@ import { useRef, useState, useEffect } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import useAnimateOnScroll, { fadeInUpVariants, staggerChildrenVariants, scaleInVariants } from '../hooks/useAnimateOnScroll'
 
-const PRIMARY_GREEN = '#6DBE45'
+const PRIMARY_GREEN = '#45b0be'
 
 function About() {
   // Track scroll position for background movement
@@ -23,47 +23,41 @@ function About() {
   // Skills and achievements shown in highlights
   const highlights = [
     { text: 'Developer', icon: '💻' },
-    { text: 'Designer', icon: '🎨' },
+    { text: 'Data  Engineer', icon: '📚' },
     { text: 'Problem Solver', icon: '🚀' }
   ]
 
   // Statistics display
   const stats = [
-    { number: '194', label: 'Completed Projects', icon: '🎯' },
-    { number: '98%', label: 'Client Rating', icon: '⭐' },
-    { number: '6', label: 'Years of Experience', icon: '⚡' },
+    { number: '3', label: 'Projects', icon: '🎯' },
+    { number: '2', label: 'Completed Project', icon: '⭐' },
+    { number: '1', label: 'Years of Experience', icon: '⚡' },
   ]
 
   // Career timeline data
   const timeline = [
     {
-      year: '2017',
-      title: 'Started Coding Journey',
-      description: 'Began learning web development through self-study and bootcamps',
+      year: '2022',
+      title: 'Started Coding, Students at Universitas Nasional',
+      description: 'Began learning Fullstack Developer Path through self-study and bootcamps',
       icon: '🌱'
     },
     {
-      year: '2019',
-      title: 'First Developer Role',
-      description: 'Joined a startup as a junior full-stack developer',
+      year: '2023',
+      title: 'First project as Fullstack Developer',
+      description: 'Final Project From E-Business Course University, Make Online Shop Website named Shoessland With HTML, JavaScript, Tailwind',
       icon: '👨‍💻'
     },
     {
-      year: '2020',
-      title: 'Freelance Success',
-      description: 'Started freelancing and completed 20+ successful projects',
+      year: '2024',
+      title: 'Fullstack Developer (UNAS FEST)',
+      description: 'Join Universitas Nasional Festival as Fullstack Developer. Developed Caturnawa website using Laravel,integrated with Supabase for database and Midtrans as the payment gateway. The website serves as a platform providing information about competitions, facilitating registrations and payments, managing competition assessments, and displaying leaderboards for each event. Hosted and maintained the website, ensuring optimal performance and reliability. ',
       icon: '🎯'
     },
     {
-      year: '2021',
-      title: 'Tech Lead',
-      description: 'Promoted to tech lead, managing a team of 5 developers',
-      icon: '👥'
-    },
-    {
-      year: '2023',
-      title: 'Independent Studio',
-      description: `Successfully completed ${stats[0].number} projects with ${stats[1].number} client satisfaction`,
+      year: '2024',
+      title: 'Back-End Developer (Anambas Tourism Website)',
+      description: `Request From Universitas Nasional make Tourist website for Anambas Island in region of Riau, and i'am Designed and implemented RESTful APIs using Laravel and MySQL for seamless data management and integration. `,
       icon: '🚀'
     }
   ]
@@ -74,25 +68,25 @@ function About() {
       icon: '🎯',
       title: 'Innovation',
       description: 'Pushing boundaries with creative solutions',
-      color: 'linear-gradient(135deg, #6DBE45 0%, #204E27 100%)'
+      color: 'linear-gradient(135deg,rgb(69, 176, 190) 0%,rgb(32, 65, 78) 100%)'
     },
     {
       icon: '⭐',
       title: 'Excellence',
       description: 'Committed to delivering premium quality',
-      color: 'linear-gradient(135deg, #204E27 0%, #6DBE45 100%)'
+      color: 'linear-gradient(135deg, rgb(32, 65, 78) 0%, rgb(69, 176, 190) 100%)'
     },
     {
       icon: '🚀',
       title: 'Growth',
       description: 'Continuous learning and improvement',
-      color: 'linear-gradient(135deg, #6DBE45 0%, #204E27 100%)'
+      color: 'linear-gradient(135deg, rgb(69, 176, 190) 0%, rgb(32, 65, 78) 100%)'
     },
     {
       icon: '⚡',
       title: 'Efficiency',
       description: 'Building trust through reliable delivery',
-      color: 'linear-gradient(135deg, #204E27 0%, #6DBE45 100%)'
+      color: 'linear-gradient(135deg, rgb(32, 65, 78) 0%, rgb(69, 176, 190) 100%)'
     }
   ]
 
@@ -126,7 +120,7 @@ function About() {
       <motion.div 
         className="absolute inset-0 opacity-20"
         style={{ 
-          backgroundImage: 'radial-gradient(circle at center, #6DBE45 1px, transparent 1px)',
+          backgroundImage: 'radial-gradient(circle at center, #45b0be 1px, transparent 1px)',
           backgroundSize: '50px 50px',
           y: backgroundY 
         }}
@@ -155,7 +149,7 @@ function About() {
                   className="text-5xl font-bold text-white"
                   variants={fadeInUpVariants}
                 >
-                  About <span className="text-[#6DBE45]">Me</span>
+                  About <span className="text-[#45b0be]">Me</span>
                 </motion.h2>
                 
                 {/* Story description */}
@@ -163,9 +157,9 @@ function About() {
                   className="text-lg text-white/80 max-w-2xl"
                   variants={fadeInUpVariants}
                 >
-                  Watch how I turned my passion into profession. With {stats[2].number} years of experience 
-                  and {stats[0].number}+ completed projects, I've dedicated my journey to creating 
-                  innovative digital solutions.
+                  Bachelor of Information System from Nasional University I am an IT enthusiast with experience as a Fullstack Web 
+Developer, specializing in PHP Laravel and the MERN stack. With my skills and interests, I am confident in my ability to 
+contribute effectively and professionally to any organization. 
                 </motion.p>
               </motion.div>
 
@@ -191,153 +185,28 @@ function About() {
                 />
 
                 {/* Video element */}
-                <motion.video
-                  ref={videoRef}
-                  className="object-cover w-full h-full transform-gpu"
-                  poster="/video-thumbnail.jpg"
-                  autoPlay
-                  muted
-                  loop
-                  loading="lazy"
-                  initial={{ scale: 1 }}
-                  whileHover={{ 
-                    scale: 1.1,
-                    transition: {
-                      duration: 0.5,
-                      ease: [0.33, 1, 0.68, 1]
-                    }
-                  }}
-                >
-                  <source src="/111.mp4" type="video/mp4" />
-                  <p>Your browser doesn&apos;t support HTML5 video.</p>
-                </motion.video>
+                <motion.img
+                src="/ac.png" // Path ke gambar
+                alt="Thumbnail"
+                className="object-cover w-full h-full transform-gpu"
+                loading="lazy"
+                initial={{ scale: 1 }}
+                whileHover={{
+                  scale: 1.1,
+                  transition: {
+                    duration: 0.5,
+                    ease: [0.33, 1, 0.68, 1],
+                  },
+                }}
+              />
 
-                {/* Video Progress Bar - Moved up and made interactive */}
-                <div className="absolute bottom-16 left-0 right-0 z-30 px-4 opacity-0 group-hover:opacity-100 
-                  transition-opacity duration-300">
-                  {/* Progress Bar Container */}
-                  <div 
-                    className="w-full h-2 bg-white/20 rounded-full cursor-pointer relative"
-                    onClick={(e) => {
-                      const bounds = e.currentTarget.getBoundingClientRect()
-                      const x = e.clientX - bounds.left
-                      const percent = x / bounds.width
-                      if (videoRef.current) {
-                        videoRef.current.currentTime = percent * videoRef.current.duration
-                      }
-                    }}
-                    onMouseMove={(e) => {
-                      if (e.buttons === 1) { // If mouse button is held down
-                        const bounds = e.currentTarget.getBoundingClientRect()
-                        const x = e.clientX - bounds.left
-                        const percent = x / bounds.width
-                        if (videoRef.current) {
-                          videoRef.current.currentTime = percent * videoRef.current.duration
-                        }
-                      }
-                    }}
-                  >
-                    {/* Progress Bar */}
-                    <motion.div 
-                      className="absolute top-0 left-0 h-full bg-[#6DBE45] rounded-full"
-                      style={{ width: `${progress}%` }}
-                      transition={{ duration: 0.1 }}
-                    >
-                      {/* Progress Handle */}
-                      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-4 h-4 
-                        bg-[#6DBE45] rounded-full shadow-lg scale-0 group-hover:scale-100 
-                        transition-transform duration-200 hover:scale-125"
-                      />
-                    </motion.div>
-                  </div>
-                </div>
+                
 
                 {/* Video Controls */}
                 <div className="absolute bottom-4 left-0 right-0 z-30 px-4 opacity-0 group-hover:opacity-100 
                   transition-opacity duration-300 bg-gradient-to-t from-black/60 to-transparent">
                   <div className="flex items-center justify-between">
-                    {/* Left Controls */}
-                    <div className="flex items-center gap-4">
-                      <button
-                        onClick={() => {
-                          const video = videoRef.current
-                          if (video.paused) {
-                            video.play()
-                          } else {
-                            video.pause()
-                          }
-                        }}
-                        className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
-                      >
-                        <svg 
-                          className="w-5 h-5 text-white" 
-                          fill="none" 
-                          viewBox="0 0 24 24" 
-                          stroke="currentColor"
-                        >
-                          {videoRef.current?.paused ? (
-                            <path 
-                              strokeLinecap="round" 
-                              strokeLinejoin="round" 
-                              strokeWidth={2} 
-                              d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"
-                            />
-                          ) : (
-                            <path 
-                              strokeLinecap="round" 
-                              strokeLinejoin="round" 
-                              strokeWidth={2} 
-                              d="M10 9v6m4-6v6"
-                            />
-                          )}
-                        </svg>
-                      </button>
-
-                      {/* Time Display */}
-                      <div className="text-sm text-white/80">
-                        {videoRef.current ? 
-                          `${Math.floor(videoRef.current.currentTime / 60)}:${Math.floor(videoRef.current.currentTime % 60).toString().padStart(2, '0')} / 
-                           ${Math.floor(videoRef.current.duration / 60)}:${Math.floor(videoRef.current.duration % 60).toString().padStart(2, '0')}`
-                          : '0:00 / 0:00'
-                        }
-                      </div>
-                    </div>
-
-                    {/* Right Controls */}
-                    <div className="flex items-center gap-4">
-                      <button
-                        onClick={() => {
-                          const video = videoRef.current
-                          if (video) {
-                            video.muted = !video.muted
-                          }
-                        }}
-                        className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
-                      >
-                        <svg 
-                          className="w-5 h-5 text-white" 
-                          fill="none" 
-                          viewBox="0 0 24 24" 
-                          stroke="currentColor"
-                        >
-                          {videoRef.current?.muted ? (
-                            <path 
-                              strokeLinecap="round" 
-                              strokeLinejoin="round" 
-                              strokeWidth={2} 
-                              d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"
-                            />
-                          ) : (
-                            <path 
-                              strokeLinecap="round" 
-                              strokeLinejoin="round" 
-                              strokeWidth={2} 
-                              d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"
-                            />
-                          )}
-                        </svg>
-                      </button>
-                    </div>
+                    
                   </div>
                 </div>
               </motion.div>
@@ -357,7 +226,7 @@ function About() {
                   whileHover={{ scale: 1.05 }}
                 >
                   <div className="flex items-center gap-2 bg-white/5 backdrop-blur-sm px-6 py-3 rounded-full
-                                hover:bg-[#6DBE45]/20 transition-all duration-300">
+                                hover:bg-[#45b0be]/20 transition-all duration-300">
                     <span className="text-2xl">{icon}</span>
                     <span className="text-white/90 group-hover:text-white">{text}</span>
                   </div>
@@ -380,13 +249,13 @@ function About() {
               {timeline.map((item, index) => (
                 <motion.div
                   key={`${item.year}-${timelineControls ? "visible" : "hidden"}`}
-                  className="relative pb-12 pl-8 border-l-2 border-[#6DBE45]/30 last:pb-0"
+                  className="relative pb-12 pl-8 border-l-2 border-[#45b0be]/30 last:pb-0"
                   variants={fadeInUpVariants}
                   custom={index}
                 >
                   <div 
                     className="absolute left-0 p-3 -translate-x-1/2 bg-[#1A1A1A] rounded-full 
-                      border-2 border-[#6DBE45] transition-all duration-300 hover:scale-110"
+                      border-2 border-[#45b0be] transition-all duration-300 hover:scale-110"
                   >
                     <span className="text-xl">{item.icon}</span>
                   </div>
@@ -397,7 +266,7 @@ function About() {
                       transition: { type: "spring", stiffness: 200 }
                     }}
                   >
-                    <span className="text-[#6DBE45] font-mono text-sm">
+                    <span className="text-[#45b0be] font-mono text-sm">
                       {item.year}
                     </span>
                     <h4 className="mt-2 mb-2 text-lg font-bold text-white">
@@ -426,7 +295,7 @@ function About() {
             className="mb-12 text-4xl font-bold text-center text-white"
             variants={fadeInUpVariants}
           >
-            Core <span className="text-[#6DBE45]">Values</span>
+            Core <span className="text-[#45b0be]">Values</span>
           </motion.h3>
 
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
@@ -480,7 +349,7 @@ function About() {
                   {/* Icon Container */}
                   <motion.div 
                     className="flex items-center justify-center w-12 h-12 mb-4 text-3xl rounded-full 
-                      sm:w-16 sm:h-16 sm:mb-6 sm:text-4xl bg-white/5 group-hover:bg-[#6DBE45]/10 
+                      sm:w-16 sm:h-16 sm:mb-6 sm:text-4xl bg-white/5 group-hover:bg-[#45b0be]/10 
                       transition-colors duration-300"
                     whileHover={{ 
                       scale: 1.1,
@@ -504,7 +373,7 @@ function About() {
                     transition={{ duration: 0.2 }}
                   >
                     <h4 className="mb-2 text-xl font-bold text-white sm:mb-3 sm:text-2xl 
-                      group-hover:text-[#6DBE45] transition-colors duration-300">
+                      group-hover:text-[#45b0be] transition-colors duration-300">
                       {value.title}
                     </h4>
                     <p className="text-sm leading-relaxed transition-colors duration-300 sm:text-base text-white/70 group-hover:text-white/90">

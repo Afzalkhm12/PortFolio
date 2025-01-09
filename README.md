@@ -152,8 +152,3 @@ The built files will be in the `dist` directory.
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 📧 Contact
-
-Venuja Prasannith - [@venuja-v11](www.linkedin.com/in/venuja-v11) - venujagamage2002@gmail.com
-
-Project Link: [https://github.com/VenujaVP/Modern-React-Portfolio-Website.git](https://github.com/VenujaVP/Modern-React-Portfolio-Website.git)

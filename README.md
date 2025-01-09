@@ -152,16 +152,6 @@ The built files will be in the `dist` directory.
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 👏 Acknowledgments
-
-- Design inspiration from modern portfolio trends
-- Icons from Heroicons
-- Animations powered by Tailwind CSS
-
 ## 📧 Contact
 
 Venuja Prasannith - [@venuja-v11](www.linkedin.com/in/venuja-v11) - venujagamage2002@gmail.com

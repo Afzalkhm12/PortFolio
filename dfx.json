@@ -1,0 +1,12 @@
+{
+    "canisters": {
+      "frontend": {
+        "type": "assets",
+        "source": [
+          "dist/**/*"
+        ]
+      }
+    },
+    "dfx_version": "0.10.0"
+  }
+  
